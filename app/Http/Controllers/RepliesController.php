@@ -20,5 +20,15 @@ class RepliesController extends Controller
         return redirect()->route('home');
     }
 
+    public function edit(Replies $reply)
+    {
+        return view('replies.edit',compact('reply'));
+    }
+
+    public function update(Replies $reply)
+    {
+        $reply->update(['body'=>\request()->body]);
+        return redirect()->route('home');
+    }
 
 }

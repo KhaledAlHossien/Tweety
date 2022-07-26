@@ -3,8 +3,9 @@
     <h5><b  class="text-sm  text-blue-500">
             {{$reply->user->name}}
             </a>
-        </b> said...</h5><br>
-
+        </b> said...</h5>
+    <x-edit-reply-buttens :reply="$reply"></x-edit-reply-buttens>
+    <br>
     <h3>{{$reply->body}}</h3>
 
     <hr class="mb-2">

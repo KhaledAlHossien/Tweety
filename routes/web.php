@@ -47,6 +47,8 @@ Route::patch('/profiles/{user:username}',[App\Http\Controllers\ProfilesControlle
 
 
 Route::post('/replies/{tweet_id}',[\App\Http\Controllers\RepliesController::class,'store']);
+Route::get('/replies/{reply}/edit',[App\Http\Controllers\RepliesController::class, 'edit']);
+Route::patch('/replies/{reply}',[App\Http\Controllers\RepliesController::class, 'update']);
 
 Route::get('/explore',[App\Http\Controllers\ExpolreController::class, 'index']);
 
