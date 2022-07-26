@@ -20,14 +20,14 @@
             <div class="flex ">
 
             <x-delete-buttens :tweet="$tweet"></x-delete-buttens>
-            <x-edit-buttens :tweet="$tweet"></x-edit-buttens>
+            <x-edit-tweet-buttens :tweet="$tweet"></x-edit-tweet-buttens>
 
             </div>
             @endcan
 
         </div>
         <div class="mb-2">
-            <p class="text-sm">created befor {{ $tweet->created_at->diffforHumans()}}</p>
+            <p class="text-xs">created befor {{ $tweet->created_at->diffforHumans()}}</p>
         </div>
 
         <p class="text-lg mb-3">
